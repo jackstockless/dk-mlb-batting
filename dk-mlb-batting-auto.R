@@ -1499,14 +1499,7 @@ dashboard$`Dollars per Point` = dashboard$Salary/dashboard$Prediction
 dashboard$`Prediction Difference` = dashboard$Prediction - dashboard$AvgPointsPerGame
 dashboard = dashboard[order(dashboard$`Dollars per Point`),]
 rownames(dashboard) = 1:nrow(dashboard)
-
-catchers = dashboard[grepl("C", dashboard$Position, fixed = T),]
-first_base = dashboard[grepl("1B", dashboard$Position, fixed = T),]
-second_base = dashboard[grepl("2B", dashboard$Position, fixed = T),]
-third_base = dashboard[grepl("3B", dashboard$Position, fixed = T),]
-shortstops = dashboard[grepl("SS", dashboard$Position, fixed = T),]
-outfielders = dashboard[grepl("OF", dashboard$Position, fixed = T),]
-
+View(dashboard)
 
 
 #### MODEL DEVELOPMENT ####
